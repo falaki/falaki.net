@@ -1,0 +1,8 @@
+@inproceedings{venkataraman2016sparkr,
+  title={Sparkr: Scaling r programs with spark},
+  author={Venkataraman, Shivaram and Yang, Zongheng and Liu, Davies and Liang, Eric and Falaki, Hossein and Meng, Xiangrui and Xin, Reynold and Ghodsi, Ali and Franklin, Michael and Stoica, Ion and others},
+  booktitle={Proceedings of the 2016 International Conference on Management of Data},
+  pages={1099--1104},
+  year={2016},
+  organization={ACM}
+}
