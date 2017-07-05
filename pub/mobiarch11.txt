@@ -1,0 +1,7 @@
+@conference{falaki2011ss,
+	title		=	{{SystemSens: A Tool for Monitoring Usage in Smartphone Research Deployments}},
+	author		=	{Falaki, H. and Mahajan, R. and Estrin, D.},
+	booktitle	=	{Proceedings of the sixth ACM international workshop on mobility in the evolving internet architecture},
+	year		=	{2011},
+	organization	=	{ACM}
+}

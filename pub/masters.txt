@@ -1,0 +1,8 @@
+@MastersThesis{falaki2008wim,
+  title	=	{{WLAN Interface Management on Mobile Devices}},
+  author	=	{Hossein, Falaki},
+  school	=	{University of Waterloo},
+  address	=	{Canada, Ontario},
+  month 	=	{August},
+  year		=	{2008}
+}

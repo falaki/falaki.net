@@ -1,0 +1,8 @@
+@MastersThesis{falaki2012phd,
+  title		=	{{Automating Personalized Battery Management on Smartphones}},
+  author	=	{Hossein, Falaki},
+  school	=	{University of California, Los Angeles},
+  address	=	{California, U.S.A},
+  month 	=	{June},
+  year		=	{2012}
+}

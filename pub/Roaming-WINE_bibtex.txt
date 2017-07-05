@@ -1,0 +1,9 @@
+@inproceedings{WiFiFalaki,
+  author    = {Hossein Falaki},
+  title     = {The Wi-Fi Roaming Game},
+  booktitle = {WINE},
+  year      = {2007},
+  pages     = {412-418},
+  ee        = {http://dx.doi.org/10.1007/978-3-540-77105-0_46},
+}
+

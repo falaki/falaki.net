@@ -1,0 +1,12 @@
+@inproceedings{DTNMobiEval06,
+  author     =  {Earl Oliver and Hossein Falaki},
+  title      =  {Performance evaluation and analysis of delay tolerant networking},
+  booktitle  =  {MobiEval '07: Proceedings of the 1st international workshop on System evaluation for mobile platforms},
+  year       =  {2007},
+  isbn       =  {978-1-59593-762-9},
+  pages      =  {1--6},
+  location   =  {San Juan, Puerto Rico},
+  doi        =  {http://doi.acm.org/10.1145/1247721.1247722},
+  publisher  =  {ACM Press},
+  address    =  {New York, NY, USA},
+}

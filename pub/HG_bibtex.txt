@@ -1,0 +1,11 @@
+@inproceedings{HG05,
+  author    = {Alireza Vahdatpour and Ahmadreza Tavakoli and Hossein Falaki},
+  title     = {Hierarchical Graph: A New Cost Effective Architecture for Network on Chip.},
+  booktitle = {EUC},
+  year      = {2005},
+  pages     = {311-320},
+  ee        = {http://dx.doi.org/10.1007/11596356_33},
+  crossref  = {DBLP:conf/euc/2005},
+  bibsource = {DBLP, http://dblp.uni-trier.de
+}
+

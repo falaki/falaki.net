@@ -1,0 +1,7 @@
+@inproceedings{kiosknet,
+  author    = {S. Guo, M.H. Falaki, E.A. Oliver, S. Ur Rahman, A. Seth, M.A. Zaharia, U. Ismail, and S. Keshav},
+  title     = {Design and Implementation of the KioskNet System},
+  booktitle = {International Conference on Information Technologies and Development},
+  year      = {2007},
+} 
+

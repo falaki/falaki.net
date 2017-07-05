@@ -1,0 +1,169 @@
+/*
+Original design: Basic Profile (v1.0 - March 23rd, 2011) - A free xhtml/css website template by Andreas Viklund.
+For more information, see http://andreasviklund.com/templates/basic-profile/
+
+Original color: #239a23
+Bluer version: #2a5a9a
+*/
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  background:#fff top center no-repeat;
+  color: #303030;
+  font: 84% Arial,Helvetica,sans-serif;
+  line-height: 1.6em;
+}
+a {
+  color: #0489B1;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #A4A4A4
+}
+
+ul, dl {
+  margin:0 0 20px 0;
+}
+
+p {
+  margin:0 0 20px 0;
+  color:#000000;
+  padding-left: 20px;
+}
+
+h1 {
+  color: #888;
+  font-size: 3.2em;
+  line-height: 1.1em;
+  letter-spacing: -2px;
+  margin: 20px 0 20px 0;
+  border-bottom: 2px solid #eee;
+}
+
+h1 a {
+  color: #888;
+  text-transform: none;
+  text-decoration: none;
+}
+
+h1 a: hover {
+  color:#888;
+}
+
+h2 {
+  font-size:2.5em;
+  color:#888;
+  margin:20px 0 10px 0;
+  letter-spacing:-1px;
+}
+
+h2 a {
+  color:#888;
+}
+
+
+h2 a:hover {
+  color:#888;
+  text-transform: none;
+  text-decoration: none;
+}
+
+h3 {
+  font-size:1.8em;
+  margin:20px 0 5px 0;
+  letter-spacing:-1px;
+  padding-left: 0px;
+}
+
+h3 a {
+  color:#888;
+}
+
+h3 a:hover {
+  color:#888;
+}
+
+
+
+h4 {
+  font-size:1.3em;
+  margin:10px 0 0px 0;
+  letter-spacing:-1px;
+  padding-left: 20px;
+}
+
+h1,h2,h3,h4 {
+  font-weight:700;
+  line-height:1.4em;
+  color:#888
+}
+
+.main {
+  color:#303030; 
+  margin:40px auto; 
+  padding:0; 
+  width:1000px;
+}
+
+.content {
+  text-align: left; 
+  width: 750px; 
+  padding-right: 40px; 
+  padding-left: 300px; 
+}
+
+.content ul {
+  list-style:none;
+  margin:0;
+  padding:10px 0 0 0; solid #eee;
+  text-align:left;
+}
+
+.content li {
+  list-style:none;
+  font-size:1.0em;
+  margin:0 0 5px;
+  padding:0 0 5px 0;
+  padding-left: 30px;
+  color:#888;
+  color:#000000
+}
+
+.menu {
+  float: left; 
+  width: 220px;
+  padding-right: 10px; 
+  border-right: 2px solid #ccc; 
+  position: fixed;
+}
+
+.menu ul {
+  list-style:none;
+  margin:0;
+  text-align: left;
+}
+
+.menuitem li {
+  list-style: none;
+  font-size: 1.5em;  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.menuitem li:hover {
+  background: #E0F2F7;
+}
+
+.submenu li {
+  font-size: 1.1em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:20px;
+}
+
+

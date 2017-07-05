@@ -1,0 +1,9 @@
+@inproceedings{falaki2010dsu,
+  author = {Falaki, Hossein and Mahajan, Ratul and Kandula, Srikanth and Lymberopoulos, Dimitrios and Govindan, Ramesh and Estrin, Deborah},
+  title = {Diversity in Smartphone Usage},
+  booktitle = {MobiSys '10: Proceedings of the 8th international conference on Mobile systems, applications and services},
+  year = {2010},
+  location = {San Francisco, CA, USA},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+ }

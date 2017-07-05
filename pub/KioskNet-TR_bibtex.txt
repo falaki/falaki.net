@@ -1,0 +1,7 @@
+@techreport{allavena:lfe,
+  title        =  {{Design and Implementation of the KioskNet System (Extended Version) },
+  author       =  {S. Guo, M.H. Falaki, U. Ismail, E.A. Oliver, S. Ur Rahman, A. Seth, M.A. Zaharia, and S. Keshav},
+  institution  =  {University of Waterloo Technical Report No. CS-2007-40, November 2007}
+}
+
+

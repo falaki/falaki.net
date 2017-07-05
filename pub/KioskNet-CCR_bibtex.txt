@@ -1,0 +1,15 @@
+@article{KioskNet-CCR,
+ author     = {S. Guo and M. H. Falaki and E. A. Oliver and S. Ur Rahman and A. Seth and M. A. Zaharia and S. Keshav},
+ title      = {Very low-cost internet access using KioskNet},
+ journal    = {SIGCOMM Comput. Commun. Rev.},
+ volume     = {37},
+ number     = {5},
+ year       = {2007},
+ issn       = {0146-4833},
+ pages      = {95--100},
+ doi        = {http://doi.acm.org/10.1145/1290168.1290181},
+ publisher  = {ACM Press},
+ address    = {New York, NY, USA},
+ }
+
+

@@ -1,0 +1,6 @@
+@article{falaki2009smart,
+  title={{Smart Screen Management on Mobile Phones}},
+  author={Falaki, H. and Govindan, R. and Estrin, D.},
+  journal={Center for Embedded Network Sensing Technical Reports #74},
+  year={2009}
+}

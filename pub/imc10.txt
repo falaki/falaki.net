@@ -1,0 +1,9 @@
+@inproceedings{falaki2010flt,
+  author = {Falaki, Hossein  and Lymberopoulos, Dimitrios and Mahajan, Ratul and Kandula, Srikanth and Estrin, Deborah},
+  title = {A First Look at Traffic on Smartphone},
+  booktitle = {Internet Measurement Conference},
+  year = {2010},
+  location = {Melbourne, Australia},
+  publisher = {ACM},
+  address = {New York, NY, USA},
+ }

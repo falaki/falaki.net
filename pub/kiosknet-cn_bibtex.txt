@@ -1,0 +1,7 @@
+@article{guo2010design,
+  title		=	{Design and implementation of the kiosknet system},
+  author	=	{Guo, S. and Derakhshani, M. and Falaki, MH and Ismail, U.  and Luk, R. and Oliver, EA and Rahman, S.U. and Seth, A. and Zaharia, MA and Keshav, S.},
+  journal	=	{Computer Networks},
+  year		=	{2010},
+  publisher	=	{Elsevier}
+}
