@@ -1,9 +1,9 @@
 var w = 1200,
-    h = 350,
+    h = 850,
     r = 400;
 
 var isXChecked = true,
-    isYChecked = false;
+    isYChecked = true;
 
 var width = 800,
     height = 100,
@@ -38,24 +38,13 @@ var svg = d3.select("body").append("svg")
 
 var newg = svg.append("g")
       .data([{x: (w - width) / 2, y: (h - height) / 3}])
-      .attr('class', 'ruler')
+      .attr('class', 'ruler');
 
 var baseg = svg.append("g")
       .data([{x: (w - width) / 2, y: (h - height)}])
-      .attr('class', 'scale')
+      .attr('class', 'scale');
 
-var baserect = baseg.append("rect")
-      .attr("id", "baseScale")
-      .attr("x", (w - scaleWidth) / 2)
-      .attr("y", (h - height) / 3 + height)
-      .attr("height", scaleHeight)
-      .attr("width", scaleWidth)
-      .attr("fill-opacity", .8)
-
-
-
-
-var dragrect = newg.append("rect")
+var dragrect = newg.append("image")
       .attr("id", "active")
       .attr("x", function(d) { return d.x; })
       .attr("y", function(d) { return d.y; })
@@ -63,7 +52,54 @@ var dragrect = newg.append("rect")
       .attr("width", width)
       .attr("fill-opacity", .5)
       .attr("cursor", "move")
+      .attr("xlink:href", "kookyaab.jpg")
       .call(drag);
+
+var dragbarleft = newg.append("rect")
+      .attr("x", function(d) { return d.x - (dragbarw/2); })
+      .attr("y", function(d) { return d.y + (dragbarw/2); })
+      .attr("height", height - dragbarw)
+      //.attr("id", "dragleft")
+      //.attr("width", dragbarw)
+      //.attr("fill", "lightblue")
+      //.attr("fill-opacity", 0.0)
+      //.attr("cursor", "ew-resize")
+      //.call(dragleft);
+
+var dragbarright = newg.append("rect")
+      .attr("x", function(d) { return d.x + width - (dragbarw/2); })
+      .attr("y", function(d) { return d.y + (dragbarw/2); });
+      //.attr("id", "dragright")
+      //.attr("height", height - dragbarw)
+      //.attr("width", dragbarw)
+      //.attr("fill", "white")
+      //.attr("fill-opacity", 0.0)
+      //.attr("cursor", "ew-resize")
+      //.call(dragright);
+
+var dragbartop = newg.append("rect")
+      .attr("x", function(d) { return d.x + (dragbarw/2); })
+      .attr("y", function(d) { return d.y - (dragbarw/2); });
+      //.attr("height", dragbarw);
+      //.attr("id", "dragleft")
+      //.attr("width", width - dragbarw)
+      //.attr("fill", "lightgreen")
+      //.attr("fill-opacity", .5)
+      //.attr("cursor", "ns-resize")
+      //.call(dragtop);
+
+var dragbarbottom = newg.append("rect")
+      .attr("x", function(d) { return d.x + (dragbarw/2); })
+      .attr("y", function(d) { return d.y + height - (dragbarw/2); });
+      //.attr("id", "dragright")
+      //.attr("height", dragbarw)
+      //.attr("width", width - dragbarw)
+      //.attr("fill", "lightgreen")
+      //.attr("fill-opacity", .5)
+      //.attr("cursor", "ns-resize")
+      //.call(dragbottom);
+
+
 
 
 function dragmove(d) {
@@ -187,4 +223,57 @@ function bdragresize(d) {
         .attr("height", height - dragbarw);
   }
 }
+
+var guid = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", 0)
+      .attr("y", 0 )
+      .attr("height", 300)
+      .attr("width", 400)
+      .attr("xlink:href", "guide.jpg");
+
+var shur = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", (w - scaleWidth) / 2)
+      .attr("y", (h - height) / 3)
+      .attr("height", scaleHeight)
+      .attr("width", scaleWidth)
+      //.attr("fill-opacity", .8)
+      .attr("xlink:href", "shur.jpg");
+
+var maahur = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", (w - scaleWidth) / 2)
+      .attr("y", (h - height) / 3 + height)
+      .attr("height", scaleHeight)
+      .attr("width", scaleWidth)
+      //.attr("fill-opacity", .8)
+      .attr("xlink:href", "maahur.jpg");
+
+var homaayoun = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", (w - scaleWidth) / 2)
+      .attr("y", (h - height) / 3 + 2 * height)
+      .attr("height", scaleHeight)
+      .attr("width", scaleWidth)
+      //.attr("fill-opacity", .8)
+      .attr("xlink:href", "homaayoun.jpg");
+
+var segaah = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", (w - scaleWidth) / 2)
+      .attr("y", (h - height) / 3 + 3 * height)
+      .attr("height", scaleHeight)
+      .attr("width", scaleWidth)
+      //.attr("fill-opacity", .8)
+      .attr("xlink:href", "segaah.jpg");
+
+var chahaargaah = baseg.append("image")
+      .attr("id", "baseScale")
+      .attr("x", (w - scaleWidth) / 2)
+      .attr("y", (h - height) / 3 + 4 * height)
+      .attr("height", scaleHeight)
+      .attr("width", scaleWidth)
+      //.attr("fill-opacity", .8)
+      .attr("xlink:href", "chahaargaah.jpg");
 
