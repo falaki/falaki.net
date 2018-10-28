@@ -1,5 +1,5 @@
 var w = 1200,
-    h = 900,
+    h = 1400,
     r = 400;
 
 var isXChecked = true,
