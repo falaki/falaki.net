@@ -2,75 +2,39 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <style type="text/css">
-      body {
-        -webkit-overflow-scrolling: touch;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-      svg {
-        border: solid 1px #aaa;
-      }
-      #checks {
-        margin: 10px;
-      }
-      .scale {
-        fill: gray;
-      }
-      svg {
-        width: 100%;
-        height: 100%;
-      }
-      .textLabel {
-        font-size: 15px;
-        font-weight: lighter;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-    <script type="text/javascript" src="./PersianScales.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <h1>Kookyab (Scale Finder)</h1>
+    <p>Created by <a href="http://farazminooei.com/">Faraz Minoei</a>, implemented by <a href="http://www.falaki.net/">Hossein Falaki</a></p>
+    <h3>
+      How to use Kookyaab (Scale finder):
+    </h3>
     <p>
-    How to use Kookyaab (Scale finder):
-    There are two parts in this page. 1. Scale intervals that are shown in rows with colored circles. 2. Kookyaab (Scale finder), a ruler that is two octaves in length. Kookyaab's unit is based on 1/4 steps or quarter tones (50 cents).
-    Example: 
+    There are two parts in this page. 
+    <ol>
+      <li>Scale intervals that are shown in rows with colored circles.</li>
+      <li>Kookyaab (Scale finder), a ruler that is two octaves in length. Kookyaab's unit is based on 1/4 steps or quarter tones (50 cents).</li>
+    </ol>
+    
+    <strong>Example:</strong> 
     Let's find the tuning for Shur G.
-    Move the pointer on the Kookyaab (SR). Hold and move the Kookyaab toward scale Shur (first row). Find note G and place it exactly below the first red circle (Shaahed - Tonic or first scale degree). Kookyaab points to the remaining circles and provides the remaining notes and scale degrees for Shur G. 
-
+    <ul>
+      <li>Move the pointer on the Kookyaab (SF).</li>
+      <li>Hold and move the Kookyaab toward scale Shur (first row).</li>
+      <li>Find note G and place it exactly below the first red circle (Shaahed - Tonic or first scale degree).</li>
+    </ul>
+    Kookyaab points to the remaining circles and provides the remaining notes and scale degrees for Shur G. 
+    </p>
+    <p>
 The red circles are Shaahed (Tonic). The Green circles are pitches that are tuned based on the key signature. The light blue circles are pitches that are altered with accidentals within an score. In this example, the first light blue circle is placed on A flat which sometimes appears in a piece in this scale. The first Green circle is the second degree of shur scale. 
 
 Now you can try and transpose and see what the pitches for Shur C are. 
     </p>
     <section id="container"></section>
 
-
-    <!-- <svg id = "#canvas" version="1.1" baseProfile="full" width="1200" height="1400"> ->
-     </svg>
-
-
-    <script>
-$('#xChecked').click(function() {
-    isXChecked = !isXChecked;
-     dragbarleft 
-        .attr("fill-opacity", (isXChecked ? 0.5 : 0))
-        .attr("cursor", (isXChecked ? "ew-resize" : "move"));
-     dragbarright 
-        .attr("fill-opacity", (isXChecked ? 0.5 : 0))
-        .attr("cursor", (isXChecked ? "ew-resize" : "move"));
-});
-
-$('#yChecked').click(function() {
-    isYChecked = !isYChecked;
-     dragbartop 
-        .attr("fill-opacity", (isYChecked ? 0.5 : 0))
-        .attr("cursor", (isYChecked ? "ns-resize" : "move"));
-     dragbarbottom 
-        .attr("fill-opacity", (isYChecked ? 0.5 : 0))
-        .attr("cursor", (isYChecked ? "ns-resize" : "move"));
-});
-    </script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+    <script type="text/javascript" src="./PersianScales.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   </body>
 </html>
