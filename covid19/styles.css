@@ -4,10 +4,17 @@ body {
   line-height: 1.6em;
   text-align: right;
   padding-right: 50px;
-  padding-left: 50px;
+  padding-left: 5%;
   margin-left: 100px;
 
 }
+
+#bookname {
+  font-size: 38pt;
+  margin-bottom: 50px
+
+}
+
 
 
 img {
