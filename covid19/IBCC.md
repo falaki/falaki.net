@@ -42,9 +42,9 @@
 
 ## پاتوفیزیولوژی
 
-۱. سندرم حاد تنفسی: مسالهی اصلی در بیماری با این ویروس سندرم حاد تنفسی (ARDS) است که با آسیب منتشر آلوئولار مشخص میشود. پنوموسیتهایی با آسیب ویروسی سلولس دیده شده که نشانگر آسیب مستقیم ویروسی است. (در مقابل آسیب التهابی محض.)
+۱. سندرم حاد تنفسی: مساله اصلی در بیماری با این ویروس سندرم حاد تنفسی (ARDS) است که با آسیب منتشر آلوئولار مشخص میشود. پنوموسیتهایی با آسیب ویروسی سلولس دیده شده که نشانگر آسیب مستقیم ویروسی است. (در مقابل آسیب التهابی محض.)
 
-۲. طوفان سایتوکاینی: شواهد جدید نشان میدهد بعضی بیماران به آلودگی با کووید19 به صورت یک طوفان سایتوکاینی قوی واکنش نشان میدهند. (با خصوصیات سپسیس باکتریال). نشانگرهای کلینیکی میتواند افزایش CRP و فریتین را در خون نشان دهد که با شدت و مرگباری بیماری نسبت دارد.
+۲. طوفان سایتوکاینی: شواهد جدید نشان می دهد بعضی بیماران به آلودگی با کووید۱۹ به صورت یک طوفان سایتوکاینی قوی واکنش نشان میدهند. (با خصوصیات سپسیس باکتریال). نشانگرهای کلینیکی میتواند افزایش CRP و فریتین را در خون نشان دهد که با شدت و مرگباری بیماری نسبت دارد.
 
 
 ## مراحل بیماری
@@ -277,7 +277,9 @@
 
 * محدودیت داده ها
      * دادههای مطالعات مختلف متناقض هستند. این احتمالا به دلیل شدت و حدت متفاوت بیماری است.
+     
 ### حساسیت و دقت سیتی اسکن
+
      * گوان و همکاران در ۸۶٪ بیماران دارای عوارض که به بیمارستان مراجعه کردند ابنرمالیتی در تصاویر سیتی مشاهده کردند. مشبها فنگ و همکاران در ۵۰ نفر از ۵۱ مورد این مشاهدات را گزارش کردند.
      * در بیماران با عوارض عمومی که عوارض تنفسی ندارند حساسیت سیتی اسکن کمتر است (تقریبا ۵۰٪) (Kanne 2/27).
 * ابنرمالیتی سیتی اسکن میتواند قبل از بروز علائم مشهود باشد؟
@@ -287,6 +289,7 @@
      * در مورد دقت عکس قفسه سینه اطلاعات کمتری جمعآوری شده
      * میتوان تصور کرد دقت عکس اشعه ایکس از سیتی اسکن کمتر است
      * در یک مطالعه، عکس قفسه سینه بر روی بیماران مراجعه کننده به یک بیمارستان دقت یافتهها ۵۹٪ بود.
+
 ![](images/image16.gif)
 
 # سونوگرافی ریه
@@ -304,7 +307,10 @@
      * برخی بیماران ممکن است حتی پیش از علائم بیماری ابرنمالیتی در سونوگرافی نشان دهند
      * برخی بیماران احتمالا پنومونی خفیف و زودهنگام بروز میدهند که با عکس رادیولوژی قابل تشخیص نیست اما با سونوگرافی قابل تشخیص است.
      * برای افزایش دقت، سونوگرافی کامل ریه باید انجام شود. سونوگرافی ساده از تنها دو نقطه به راحتی میتوانند موارد مشکوک را پنهان نگاه دارد.
+     
+     
 [![](images/lung-ultra1.gif)](https://twitter.com/adamdavidthomas/status/1236555234580676608)
+
 [![](images/lung-ultra2.gif)](https://twitter.com/adamdavidthomas/status/1236555236728135680)
 
 # برخورد کلی با عکس برداری
@@ -621,8 +627,28 @@
 # چک لیستها
 ![](images/image17.png)
 ![](images/image13.png)
-# پادکست
 
 # سوالات و مباحث
 
 # مشکلات
+
+# منابع بیشتر
+
+* Journal & Society homepages on COVID-19
+      * [CDC](https://www.cdc.gov/coronavirus/index.html)
+      * [JAMA](https://jamanetwork.com/journals/jama/pages/coronavirus-alert)
+      * [LANCET](https://www.thelancet.com/coronavirus)
+      * [NEJM](https://www.nejm.org/coronavirus)
+      * [BMJ](https://www.bmj.com/coronavirus)
+      * [ESICM](https://www.esicm.org/resources/coronavirus-public-health-emergency/)
+      * [AMA](https://www.ama-assn.org/topics/coronavirus-covid-19)
+* FOAMed on COVID-19
+      * [WHO guidelines on fluid administration for COVID-19 are dangerous](https://emcrit.org/pulmcrit/coronavirus/) (PulmCrit)
+      * EMCrit RACC on [airway management](https://emcrit.org/emcrit/airway-covid-19/) in COVID-19 (Weingart & Brian Wright)
+      * COVID-19 on [RebelEM](https://rebelem.com/covid-19-the-novel-coronavirus-2019/) (Salim Rezaie)
+      * COVID-19 on [St. Emlyns](https://www.stemlynsblog.org/2019-novel-coronavirus-wuhan-at-st-emlyns/) (Ashley Liebig)
+      * COVID-19 on [Radiopaedia](https://radiopaedia.org/articles/covid-19?fbclid=IwAR2G1HjFlbP1aj3Inj_-HqG27NM3lx8TXE4VpTpTHUu0PYWRTJmHvIqbVAE) (Daniel Bell)
+* (References to some patient series listed in the tables)
+      * [Yang et al](https://www.thelancet.com/action/showPdf?pii=S2213-2600%2820%2930079-5): 52 critically ill patients, Lancet
+      * [Chen et al](https://www.thelancet.com/action/showPdf?pii=S0140-6736%2820%2930211-7): 99 infected patients, Lancet
+      * [Shi et al](https://www.thelancet.com/action/showPdf?pii=S1473-3099%2820%2930086-4): 81 patients with CT imaging, Lancet.
