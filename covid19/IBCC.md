@@ -19,7 +19,7 @@
 برای کمک به این پروژه:
 
 * بهترین کار فرستادن یک درخواست تغییر از طریق github pull request به [این فایل](https://github.com/falaki/falaki.net/blob/master/covid19/IBCC.md) است.
-* چنانچه با روش کار با github آشنا نیستید می توانید ترجمه خود را به falak@gmail.com ارسال کنید.
+* چنانچه با روش کار با github آشنا نیستید می توانید ترجمه خود را به falaki@gmail.com ارسال کنید.
 
 
 # زیست‌شناسی
