@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "farvahar",
+    "date": "2025-07-24",
+    "locales": {
+      "en": {
+        "title": "The Etymology and Iconography of “Faravahar”",
+        "excerpt": "The Farvahar symbol is one of the most common and yet least understood symbols of Persian identity",
+        "dir": "ltr",
+        "lang": "en"
+      },
+      "fa": {
+        "title": "واژه و تصویر فروهر",
+        "excerpt": "با وجود محبوبیت نماد فروهر میان ایرانیان اندکی از وجه اشتقاق این واژه و تاریخچه‌ی آن اطلاع دارند",
+        "dir": "rtl",
+        "lang": "fa"
+      }
+    }
+  }
+]

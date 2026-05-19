@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thoughts on History and Linguistics — Hossein Falaki">
+    <title>Thoughts on History and Linguistics</title>
+    <link rel="stylesheet" href="../main.css" media="all">
+    <link rel="stylesheet" href="blog.css" media="all">
+  </head>
+  <body>
+    <div class="main">
+      <div class="blog-header">
+        <p class="blog-nav"><a href="../index.html">← Home</a></p>
+        <h1 class="blog-site-titles">
+          <span class="blog-site-title" dir="ltr" lang="en">Thoughts on History and Linguistics</span>
+          <span class="blog-site-title-sep" aria-hidden="true">·</span>
+          <span class="blog-site-title" dir="rtl" lang="fa">پراکنده از تاریخ و زبان‌شناسی</span>
+        </h1>
+        <p class="blog-site-nav">
+          <a href="index.html" class="blog-site-nav-current">Posts</a>
+          ·
+          <a href="about.html">About</a>
+        </p>
+      </div>
+
+      <p id="blog-status" class="blog-loading">Loading posts…</p>
+      <ul id="blog-post-list" class="blog-post-list" hidden></ul>
+    </div>
+
+    <script src="posts-data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="blog.js"></script>
+    <script>
+      (function () {
+        var statusEl = document.getElementById("blog-status");
+        var listEl = document.getElementById("blog-post-list");
+
+        Blog.fetchPosts()
+          .then(function (posts) {
+            if (!posts.length) {
+              statusEl.textContent = "No posts yet.";
+              return;
+            }
+
+            statusEl.hidden = true;
+            listEl.hidden = false;
+
+            posts.forEach(function (post) {
+              var item = document.createElement("li");
+              var date = document.createElement("p");
+              date.className = "post-date";
+              date.textContent = Blog.formatDate(post.date);
+              item.appendChild(date);
+
+              var langSwitch = document.createElement("p");
+              langSwitch.className = "blog-lang-switch";
+              Blog.renderLangSwitcher(langSwitch, post.slug, post.locales, null);
+              if (!langSwitch.hidden) {
+                item.appendChild(langSwitch);
+              }
+
+              Blog.LOCALES.forEach(function (locale) {
+                var localePost = post.locales[locale];
+                if (!localePost) {
+                  return;
+                }
+
+                var title = document.createElement("h2");
+                title.className = "post-title";
+                var link = document.createElement("a");
+                link.href = Blog.postUrl(post.slug, locale);
+                link.textContent = localePost.title;
+                link.setAttribute("dir", localePost.dir);
+                link.setAttribute("lang", localePost.lang);
+                title.appendChild(link);
+                item.appendChild(title);
+
+                if (localePost.excerpt) {
+                  var excerpt = document.createElement("p");
+                  excerpt.className = "post-excerpt";
+                  excerpt.textContent = localePost.excerpt;
+                  excerpt.setAttribute("dir", localePost.dir);
+                  excerpt.setAttribute("lang", localePost.lang);
+                  item.appendChild(excerpt);
+                }
+              });
+
+              listEl.appendChild(item);
+            });
+          })
+          .catch(function () {
+            statusEl.textContent =
+              "Could not load posts. Run ./build.sh in the blog directory after adding posts.";
+          });
+      })();
+    </script>
+  </body>
+</html>

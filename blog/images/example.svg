@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="200" viewBox="0 0 560 200" role="img" aria-label="Example placeholder image">
+  <rect width="560" height="200" fill="#f4f4f4" stroke="#ddd" stroke-width="2"/>
+  <text x="280" y="100" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="18" fill="#888">blog/images/example.svg</text>
+  <text x="280" y="130" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="14" fill="#aaa">Replace with your own image file</text>
+</svg>

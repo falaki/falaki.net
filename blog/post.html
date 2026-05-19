@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog — Hossein Falaki</title>
+    <link rel="stylesheet" href="../main.css" media="all">
+    <link rel="stylesheet" href="blog.css" media="all">
+  </head>
+  <body>
+    <div class="main blog-article">
+      <p class="blog-nav"><a href="index.html">← Posts</a> · <a href="about.html">About</a> · <a href="../index.html">Home</a></p>
+      <p id="blog-status" class="blog-loading">Loading post…</p>
+      <article id="blog-post" hidden>
+        <p id="post-lang-switch" class="blog-lang-switch" hidden></p>
+        <h1 id="post-title"></h1>
+        <p id="post-meta" class="post-meta"></p>
+        <div id="post-body" class="post-body"></div>
+      </article>
+    </div>
+
+    <script src="posts-data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="blog.js"></script>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var slug = params.get("slug");
+        var lang = params.get("lang");
+        var statusEl = document.getElementById("blog-status");
+        var articleEl = document.getElementById("blog-post");
+        var langSwitchEl = document.getElementById("post-lang-switch");
+        var titleEl = document.getElementById("post-title");
+        var metaEl = document.getElementById("post-meta");
+        var bodyEl = document.getElementById("post-body");
+
+        if (!slug || !Blog.validSlug(slug)) {
+          statusEl.textContent = "Post not found.";
+          return;
+        }
+
+        Blog.fetchPosts()
+          .then(function (posts) {
+            var post = Blog.findPost(posts, slug);
+            if (!post) {
+              throw new Error("Post not in index");
+            }
+
+            if (!lang || !Blog.validLocale(lang) || !post.locales[lang]) {
+              lang = Blog.defaultLocale(post.locales);
+            }
+
+            if (!post.locales[lang]) {
+              throw new Error("Locale not available");
+            }
+
+            Blog.renderLangSwitcher(
+              langSwitchEl,
+              slug,
+              post.locales,
+              lang
+            );
+
+            return Blog.loadPostLocale(slug, lang);
+          })
+          .then(function (result) {
+            var localeData = result.localeData;
+            var dir = localeData.dir;
+            var langAttr = localeData.lang;
+
+            Blog.applyDocumentDirection(dir, langAttr);
+
+            document.title = localeData.title + " — Blog";
+            titleEl.textContent = localeData.title;
+            titleEl.setAttribute("dir", dir);
+            titleEl.setAttribute("lang", langAttr);
+
+            metaEl.textContent = Blog.formatDate(result.post.date || "");
+            metaEl.setAttribute("dir", dir);
+            metaEl.setAttribute("lang", langAttr);
+
+            bodyEl.innerHTML = Blog.renderMarkdown(localeData.body || "");
+            bodyEl.setAttribute("dir", dir);
+            bodyEl.setAttribute("lang", langAttr);
+
+            statusEl.hidden = true;
+            articleEl.hidden = false;
+          })
+          .catch(function () {
+            statusEl.textContent = "Post not found.";
+          });
+      })();
+    </script>
+  </body>
+</html>
