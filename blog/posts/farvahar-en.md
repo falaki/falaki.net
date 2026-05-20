@@ -13,13 +13,10 @@ But what is fravashi? The meaning of this word is among the most enigmatic conce
 
 The relationship between fravashi and urvan remains one of the most debated issues in Zoroastrian studies. Most scholars consider the concept of fravashi to have originated during the heroic age of Iranian history (around 1500 BCE). This may explain why the concept is absent from Indian traditions and exists only among Iranians. Furthermore, the idea predates the prophet Zoroaster. There is another group of scholars who consider fravashi to have developed after Zoroaster but assimilated with archaic elements. The major scholarly theories about the etymology of fravashi are as follows:
 
-1. If fravashi derives from the root vert (to turn or revolve) with the prefix fra, it would mean “to pass on” or “to die.” In this interpretation, fravashi and urvan are essentially the same.
-
-2. If it derives from the root ver (to conceive or to carry) with fra and the infinitive suffix -ti, forming fravash[t]i, then references in the Avesta to ancestral spirits prayed to for the birth of sons become more understandable.
-
-3. According to a third view, the root var meaning “to cover, protect” (as in vərəti) combined with fra (to ward off) suggests that fravashi means “protective warrior spirit.” In this view, fravashis are distinct from ordinary urvans; rather than descending underground, they cross the Chinvat Bridge (the bridge of judgment, akin to Islam’s Sirat bridge) and ascend to the heavens from Mount Harā (Alborz).
-
-4. A fourth theory traces the root to var meaning “to choose,” rendering the word as “one chosen for eternal sanctification.” Despite differing in linguistic origin, this interpretation shares conceptual ground with the third.
+1. If fravashi derives from the root vert (to turn or revolve) with the prefix fra, it would mean “to pass on” or “to die.” In this interpretation, fravashi and urvan are essentially the same.  
+2. If it derives from the root ver (to conceive or to carry) with fra and the infinitive suffix -ti, forming fravash[t]i, then references in the Avesta to ancestral spirits prayed to for the birth of sons become more understandable.  
+3. According to a third view, the root var meaning “to cover, protect” (as in vərəti) combined with fra (to ward off) suggests that fravashi means “protective warrior spirit.” In this view, fravashis are distinct from ordinary urvans; rather than descending underground, they cross the Chinvat Bridge (the bridge of judgment, akin to Islam’s Sirat bridge) and ascend to the heavens from Mount Harā (Alborz).  
+4. A fourth theory traces the root to var meaning “to choose,” rendering the word as “one chosen for eternal sanctification.” Despite differing in linguistic origin, this interpretation shares conceptual ground with the third.  
 
 Mary Boyce, after comparing these and other theories, [concluded](https://www.iranicaonline.org/articles/fravasi/) that fravashi is a vestige of ancestral worship among early Iranian-Aryan migrants. She suggests that this cult was particularly prevalent among warriors and differed from the religious practices of pastoralist Iranian-Aryans. Eventually, the two concepts — urvan and fravashi — merged. According to Boyce, Zoroaster likely attempted to reduce the prominence of both ideas, as they contradicted his religious framework, which emphasized that the soul’s fate depends solely on thought, word, and deed — not on offerings from descendants or one’s warrior lineage. Notably, the word fravashi does not appear in Zoroaster’s hymns.
 
@@ -50,12 +47,9 @@ Notably, Achaemenid representations of this motif evolved slightly after Darius�
 
 All these images have been observed by Iranians and foreign explorers who visited the ancient sites of Iran. An orientalist named Antoine Isaac Silvestre de Sacy (1758–1838), who is best known for deciphering Pahlavi inscriptions of Sassanian kings, was the first to associate the motif with what he called férouher. Ever since his seminal manuscript on the topic, this symbol has been named faravahar.
 
-Regardless of the current convention, there are three main scholarly interpretations of what this symbol meant to the Achaemenids:
-
-1. Divine Representation: In the early days of Achaemenid studies, some scholars considered the symbol to represent Ahura Mazda. One supporting argument was the invocation of Ahura Mazda in the accompanying inscriptions. However, this theory is now largely regarded as unlikely.
-
-2. Royal Fravashi: Others have pointed out that in the relief above Darius’s tomb, the man within the winged ring wears a headdress that closely resembles Darius’s royal crown. This has led to the interpretation of the image as a visual representation of the king’s fravashi. Darius I referred to himself as a ready and capable warrior. This theory is the basis for naming the symbol “Faravahar.”
-
-3. Royal Glory (Khvarenah): The most widely accepted view today is that the symbol represents khvarenah, the divine royal glory. In modern Persian the word has evolved to farr. This is the word that was adopted by the Greeks and eventually become the English word “charisma.” Evidence cited in favor of this interpretation includes the presence of a solar disc (a common emblem of divine radiance) and a crescent moon beside it above Darius’s tomb.
+Regardless of the current convention, there are three main scholarly interpretations of what this symbol meant to the Achaemenids:   
+1. Divine Representation: In the early days of Achaemenid studies, some scholars considered the symbol to represent Ahura Mazda. One supporting argument was the invocation of Ahura Mazda in the accompanying inscriptions. However, this theory is now largely regarded as unlikely.  
+2. Royal Fravashi: Others have pointed out that in the relief above Darius’s tomb, the man within the winged ring wears a headdress that closely resembles Darius’s royal crown. This has led to the interpretation of the image as a visual representation of the king’s fravashi. Darius I referred to himself as a ready and capable warrior. This theory is the basis for naming the symbol “Faravahar.”  
+3. Royal Glory (Khvarenah): The most widely accepted view today is that the symbol represents khvarenah, the divine royal glory. In modern Persian the word has evolved to farr. This is the word that was adopted by the Greeks and eventually become the English word “charisma.” Evidence cited in favor of this interpretation includes the presence of a solar disc (a common emblem of divine radiance) and a crescent moon beside it above Darius’s tomb.  
 
 The symbol’s usage disappeared from royal reliefs after the fall of the great Achaemenid kings. It became popular again in modern times among Zoroastrians of Iran and India. The first picture in this essay was taken by the author at the [Adorian Temple](https://en.wikipedia.org/wiki/Adrian_Temple_of_Tehran) in Tehran recently. 
