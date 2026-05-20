@@ -1,6 +1,11 @@
 /* Medium-style reading serif (Source Serif 4 ≈ Charter); Noto Serif for Persian glyphs */
 :root {
   --blog-serif: "Source Serif 4", "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --blog-fa: "Iranian Sans", "Noto Sans Arabic", "Vazirmatn", Tahoma, sans-serif;
+}
+
+html[dir="rtl"] {
+  --blog-serif: var(--blog-fa);
 }
 
 .blog .main {

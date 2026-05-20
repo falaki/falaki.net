@@ -71,11 +71,11 @@
 
                 var title = document.createElement("h2");
                 title.className = "post-title";
+                title.setAttribute("dir", localePost.dir);
+                title.setAttribute("lang", localePost.lang);
                 var link = document.createElement("a");
                 link.href = Blog.postUrl(post.slug, locale);
                 link.textContent = localePost.title;
-                link.setAttribute("dir", localePost.dir);
-                link.setAttribute("lang", localePost.lang);
                 title.appendChild(link);
                 item.appendChild(title);
 
