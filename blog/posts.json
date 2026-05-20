@@ -5,7 +5,7 @@
     "locales": {
       "fa": {
         "title": "واژه ناشناسی مدل‌های هوش مصنوعی",
-        "excerpt": "استفاده از ابزارهای هوش‌ مصنوعی و مدل‌های کلان احتمالاتی زبانی برای یافتن وجه اشتقاق کلمات فارسی و عموما ربط دادن آنها به فارسی باستان و اوستائی بلای جدیدی است در میان فارسی زبانان",
+        "excerpt": "زبان‌شناسانی چون مرحوم مصطفی ذاکری دل خونی از ریشه‌شناسان تفننی و ریشه‌بافی‌های متوهمانه داشتند. بسیاری بدون ‌شناخت درست از قواعد و‌ نظریات «زبان‌شناسی تاریخی» به حدسیات دست می‌زنند و بعد از آن حدسیات غلط نتایجی فراتر از حوزه‌ی علم زبان‌شناسی استخراج می‌کنند. فقط می‌توان تصور کرد که با همه‌گیری ابزارهای هوش‌ مصنوعی و مدل‌های کلان احتمالاتی زبانی (LLM) آب چقدر گل‌آلودتر خواهد شد و چه هیاهویی در اتاق پژواک رسانه‌های مجازی خواهد بود از این اغلاط.",
         "dir": "rtl",
         "lang": "fa"
       }
@@ -17,9 +17,15 @@
     "locales": {
       "en": {
         "title": "The Etymology and Iconography of “Faravahar”",
-        "excerpt": "The Farvahar symbol is one of the most common and yet least understood symbols of Persian identity",
+        "excerpt": "The etymology of the word Faravahar offers an opportunity to explore some of the most complex religious and national concepts in Iranian tradition. For about two centuries now, the symbol commonly referred to as Faravahar or Farvahar has been regarded by many as a representation of the Zoroastrian religion (Mazdayasnā), or even as an emblem of Ahura Mazda. This symbol is frequently used in the architecture of contemporary Zoroastrian fire temples. In this essay I don’t aim to confirm or reject that belief. Instead, I focus on the etymology of the word and the history of its usage, including that of the visual symbol associated with Faravahar.",
         "dir": "ltr",
         "lang": "en"
+      },
+      "fa": {
+        "title": "نام و نماد «فروهر»",
+        "excerpt": "ریشه شناسی واژه «فروهر» فرصتی‌ست برای مطالعه‌ی چندی از پیچیده‌ترین مفاهیم دینی و ملی ایران. از حدود یک قرن پیش برای بسیاری نمادی که فروهر نام گرفته نشانه‌ی دین زرتشت (مزدیسنا) و حتی نشان اهورامزد قلمداد شده چنانکه در معماری آتشکده‌های زرتشتی معاصر در ایران و هند به وفور این نماد به کار گرفته شده. در اینجا هدف رد یا تایید این «اعتقاد» رایج نیست و صرفا به واکاوی ریشه کلمه و تاریخچه کاربرد آن می‌پردازیم. همین مسیر را برای نماد بصری فروهر هم طی می‌کنیم.",
+        "dir": "rtl",
+        "lang": "fa"
       }
     }
   }

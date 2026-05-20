@@ -34,11 +34,29 @@ def split_post(text: str) -> tuple[dict, str]:
     return parse_frontmatter_block(match.group(1)), match.group(2)
 
 
+def first_paragraph(body: str) -> str:
+    for chunk in re.split(r"\n{2,}", body):
+        chunk = chunk.strip()
+        if not chunk or chunk.startswith(("#", "!", ">", "---", "```")):
+            continue
+        # strip markdown: images, links, bold/italic, inline code, HTML tags
+        chunk = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", chunk)
+        chunk = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", chunk)
+        chunk = re.sub(r"[*_]{1,3}([^*_]+)[*_]{1,3}", r"\1", chunk)
+        chunk = re.sub(r"`[^`]+`", "", chunk)
+        chunk = re.sub(r"<[^>]+>", "", chunk)
+        chunk = " ".join(chunk.split())
+        if chunk:
+            return chunk
+    return ""
+
+
 def locale_entry(meta: dict, locale: str, body: str) -> dict:
     direction = meta.get("dir", "rtl" if locale == "fa" else "ltr").lower()
+    excerpt = meta.get("excerpt", "") or first_paragraph(body)
     return {
         "title": meta.get("title", ""),
-        "excerpt": meta.get("excerpt", ""),
+        "excerpt": excerpt,
         "dir": "rtl" if direction == "rtl" else "ltr",
         "lang": meta.get("lang", "fa" if locale == "fa" else "en"),
         "body": body,

@@ -104,17 +104,18 @@ h1,h2,h3,h4 {
 }
 
 .main {
-  color:#303030; 
-  margin:40px auto; 
-  padding:0; 
-  width:1000px;
+  color:#303030;
+  margin:40px auto;
+  padding:0 1rem;
+  max-width:1000px;
+  box-sizing: border-box;
 }
 
 .content {
-  text-align: left; 
-  width: 750px; 
-  padding-right: 40px; 
-  padding-left: 300px; 
+  text-align: left;
+  padding-right: 40px;
+  padding-left: 280px;
+  box-sizing: border-box;
 }
 
 .content ul {
@@ -135,10 +136,10 @@ h1,h2,h3,h4 {
 }
 
 .menu {
-  float: left; 
+  float: left;
   width: 220px;
-  padding-right: 10px; 
-  border-right: 2px solid #ccc; 
+  padding-right: 10px;
+  border-right: 2px solid #ccc;
   position: fixed;
 }
 
@@ -146,6 +147,42 @@ h1,h2,h3,h4 {
   list-style:none;
   margin:0;
   text-align: left;
+}
+
+@media (max-width: 700px) {
+  .main {
+    margin: 1rem auto;
+  }
+
+  .menu {
+    position: static;
+    float: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .menu img {
+    display: none;
+  }
+
+  .menu ul.menuitem {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  .menu ul.submenu {
+    display: none;
+  }
+
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .menuitem li {

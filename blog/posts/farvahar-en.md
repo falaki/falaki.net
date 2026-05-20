@@ -1,7 +1,7 @@
 ---
 title: The Etymology and Iconography of “Faravahar”
 date: 2025-07-24
-excerpt: The Farvahar symbol is one of the most common and yet least understood symbols of Persian identity
+excerpt: 
 ---
 
 ![Faravahar symbol decorating the Adorian Zoroastrian temple in Tehran (1917)](blog/images/farvahar1.webp)

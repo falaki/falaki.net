@@ -14,6 +14,11 @@ html[dir="rtl"] {
   line-height: 1.58;
   letter-spacing: -0.004em;
   color: #242424;
+  width: auto;
+  max-width: 780px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: border-box;
 }
 
 .blog .blog-nav,
@@ -157,6 +162,16 @@ html[dir="rtl"] {
   line-height: 1.58;
 }
 
+.blog-post-list .post-title[dir="rtl"],
+.blog-post-list .post-excerpt[dir="rtl"] {
+  text-align: right;
+}
+
+.blog-post-list li .post-title ~ .post-title,
+.blog-post-list li .post-excerpt + .post-title {
+  margin-top: 1.5em;
+}
+
 .blog-post-list .post-title a {
   color: #242424;
   text-decoration: none;
@@ -179,6 +194,7 @@ html[dir="rtl"] {
   color: #242424;
   border-bottom: none;
   margin: 0 0 0.5em 0;
+  text-wrap: balance;
 }
 
 .blog-article .post-body {
@@ -187,10 +203,16 @@ html[dir="rtl"] {
   letter-spacing: -0.004em;
 }
 
+.blog-article .post-body p,
+.blog-article .post-body li {
+  text-wrap: pretty;
+}
+
 .blog-article .post-body h2,
 .blog-article .post-body h3,
 .blog-article .post-body h4 {
   font-family: var(--blog-serif);
+  text-wrap: balance;
   font-weight: 600;
   color: #242424;
   letter-spacing: -0.01em;
