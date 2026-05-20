@@ -110,11 +110,120 @@
     });
   }
 
-  function renderMarkdown(body) {
-    if (typeof marked !== "undefined") {
-      return marked.parse(body);
+  function escapeHtml(text) {
+    return String(text)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function normalizeBlogImagePaths(text) {
+    return text
+      .replace(/\]\(\/?(?:blog\/)?images\//g, "](images/")
+      .replace(/src=["']\/?(?:blog\/)?images\//g, 'src="images/');
+  }
+
+  function normalizeImageSrc(url) {
+    var src = url.trim();
+    if (/^(?:https?:)?\/\//.test(src)) {
+      return src;
     }
-    return "<pre>" + body.replace(/</g, "&lt;") + "</pre>";
+    if (/^\/?(?:blog\/)?images\//.test(src)) {
+      return "images/" + src.replace(/^\/?(?:blog\/)?images\//, "");
+    }
+    return normalizeBlogImagePaths("](" + src + ")").slice(2, -1);
+  }
+
+  function normalizeImageSrcAttribute(src) {
+    if (!src || /^(?:https?:)?\/\//.test(src) || /^data:/.test(src)) {
+      return src;
+    }
+    return normalizeImageSrc(src);
+  }
+
+  function preprocessFigureImages(text) {
+    return text.replace(
+      /!\[([^\]|]*)\|([^\]]+)\]\(([^)]+)\)/g,
+      function (_, alt, caption, url) {
+        return (
+          '<figure class="blog-figure"><img src="' +
+          escapeHtml(normalizeImageSrc(url)) +
+          '" alt="' +
+          escapeHtml(alt.trim()) +
+          '"><figcaption>' +
+          escapeHtml(caption.trim()) +
+          "</figcaption></figure>"
+        );
+      }
+    );
+  }
+
+  function wrapImagesWithCaptions(html) {
+    if (typeof DOMParser === "undefined") {
+      return html;
+    }
+
+    var doc = new DOMParser().parseFromString(
+      '<div id="blog-caption-root">' + html + "</div>",
+      "text/html"
+    );
+    var root = doc.getElementById("blog-caption-root");
+    if (!root) {
+      return html;
+    }
+
+    var images = root.querySelectorAll("img");
+    for (var i = 0; i < images.length; i++) {
+      var img = images[i];
+
+      var src = img.getAttribute("src");
+      if (src) {
+        img.setAttribute("src", normalizeImageSrcAttribute(src));
+      }
+
+      if (img.closest("figure.blog-figure")) {
+        continue;
+      }
+
+      var title = (img.getAttribute("title") || "").trim();
+      var alt = (img.getAttribute("alt") || "").trim();
+      var caption = title || alt;
+
+      if (!caption) {
+        continue;
+      }
+
+      var figure = doc.createElement("figure");
+      figure.className = "blog-figure";
+
+      var figcaption = doc.createElement("figcaption");
+      figcaption.textContent = caption;
+
+      if (title) {
+        img.removeAttribute("title");
+      } else {
+        img.setAttribute("alt", "");
+      }
+
+      var parent = img.parentNode;
+      parent.insertBefore(figure, img);
+      figure.appendChild(img);
+      figure.appendChild(figcaption);
+    }
+
+    return root.innerHTML;
+  }
+
+  function renderMarkdown(body) {
+    var prepared = preprocessFigureImages(normalizeBlogImagePaths(body));
+    var html;
+    if (typeof marked !== "undefined") {
+      html = marked.parse(prepared);
+    } else {
+      html = "<pre>" + prepared.replace(/</g, "&lt;") + "</pre>";
+    }
+    return wrapImagesWithCaptions(html);
   }
 
   function resolveBlogUrl(relativePath) {

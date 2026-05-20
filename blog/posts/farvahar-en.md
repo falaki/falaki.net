@@ -4,7 +4,7 @@ date: 2025-07-24
 excerpt: The Farvahar symbol is one of the most common and yet least understood symbols of Persian identity
 ---
 
-![Faravahar relief](images/farvahar1.jpg)
+![Faravahar relief on an Achaemenid relief](images/farvahar1.webp)
 
 The etymology of the word Faravahar offers an opportunity to explore some of the most complex religious and national concepts in Iranian tradition. For about two centuries now, the symbol commonly referred to as Faravahar or Farvahar has been regarded by many as a representation of the Zoroastrian religion (Mazdayasnā), or even as an emblem of Ahura Mazda. This symbol is frequently used in the architecture of contemporary Zoroastrian fire temples. In this essay I don’t aim to confirm or reject that belief. Instead, I focus on the etymology of the word and the history of its usage, including that of the visual symbol associated with Faravahar.
 
