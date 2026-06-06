@@ -42,6 +42,10 @@ Both the Assyrians and the Iranians appear to have borrowed this symbol from the
 
 ![Depiction the Egyptian god Horus as a falcon](blog/images/farvahar5.webp)
 
+![Winged sun disk on the Pyramidion of Amenemhat III (c 1850 BC)](blog/images/farvahar8.jpg)
+
+![Depiction of Horus at the entrance of Ramesses III (c 1185 BC) ](blog/images/farvahar7.JPG)
+
 Notably, Achaemenid representations of this motif evolved slightly after Darius’s reconquest of Egypt in 519 BCE. The wings become longer and more angular in following depictions.
 
 ![Relief on Persepolis walls](blog/images/farvahar6.webp)
@@ -49,8 +53,12 @@ Notably, Achaemenid representations of this motif evolved slightly after Darius�
 All these images have been observed by Iranians and foreign explorers who visited the ancient sites of Iran. An orientalist named Antoine Isaac Silvestre de Sacy (1758–1838), who is best known for deciphering Pahlavi inscriptions of Sassanian kings, was the first to associate the motif with what he called férouher. Ever since his seminal manuscript on the topic, this symbol has been named faravahar.
 
 Regardless of the current convention, there are three main scholarly interpretations of what this symbol meant to the Achaemenids:   
-1. Divine Representation: In the early days of Achaemenid studies, some scholars considered the symbol to represent Ahura Mazda. One supporting argument was the invocation of Ahura Mazda in the accompanying inscriptions. However, this theory is now largely regarded as unlikely.  
-2. Royal Fravashi: Others have pointed out that in the relief above Darius’s tomb, the man within the winged ring wears a headdress that closely resembles Darius’s royal crown. This has led to the interpretation of the image as a visual representation of the king’s fravashi. Darius I referred to himself as a ready and capable warrior. This theory is the basis for naming the symbol “Faravahar.”  
-3. Royal Glory (Khvarenah): The most widely accepted view today is that the symbol represents khvarenah, the divine royal glory. In modern Persian the word has evolved to farr. This is the word that was adopted by the Greeks and eventually become the English word “charisma.” Evidence cited in favor of this interpretation includes the presence of a solar disc (a common emblem of divine radiance) and a crescent moon beside it above Darius’s tomb.  
 
-The symbol’s usage disappeared from royal reliefs after the fall of the great Achaemenid kings. It became popular again in modern times among Zoroastrians of Iran and India. The first picture in this essay was taken by the author at the [Adorian Temple](https://en.wikipedia.org/wiki/Adrian_Temple_of_Tehran) in Tehran recently. 
+1. __Royal Fravashi:__ Antoine Isaac Silvestre de Sacy was the first one who conjectured the name "faravahar" for the visual symbol on Achaemenid art. He pointed out that in the relief above Darius’s tomb, the man within the winged ring wears a headdress that closely resembles Darius’s royal crown. He called the visual representation of the king’s fravashi. Darius I referred to himself as a ready and capable warrior.  
+2. __Divine Representation:__ Since the early days of Achaemenid studies, some scholars considered the symbol to represent Ahura Mazda. One supporting argument was the invocation of Ahura Mazda in the accompanying inscriptions. 
+3. __Royal Glory (Khvarenah):__ The most widely accepted view today is that the symbol represents khvarenah, the divine royal glory. In modern Persian the word has evolved to farr. This is the word that was adopted by the Greeks and eventually become the English word “charisma.” Evidence cited in favor of this interpretation includes the presence of a solar disc (a common emblem of divine radiance) and a crescent moon beside it above Darius’s tomb.  
+
+
+![Coin of Wadfradad I, hellenized as Autophradates I, ruler of Persis in the late 2nd-century BC](blog/images/faravahar9.jpg)
+While the symbol’s usage disappeared from royal reliefs after the fall of the great Achaemenid kings, the local rulers of Pars during the Selucid and the Parthian empires continued using the symbol on coinage. 
+ It became popular again in modern times among Zoroastrians of Iran and India. The first picture in this essay was taken by the author at the [Adorian Temple](https://en.wikipedia.org/wiki/Adrian_Temple_of_Tehran) in Tehran recently. 
