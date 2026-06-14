@@ -12,7 +12,7 @@ OUTPUT_JS = BLOG_DIR / "posts-data.js"
 
 FRONTMATTER_RE = re.compile(r"^---\s*\r?\n(.*?)\r?\n---\s*\r?\n([\s\S]*)", re.DOTALL)
 LOCALE_FILE_RE = re.compile(r"^(.+)-(en|fa)$")
-REFERENCE_DEF_RE = re.compile(r"^\[\^([^\]]+)\]:\s*(.*)$")
+REFERENCE_DEF_RE = re.compile(r"^\[\^([^\]]*)\]:\s*(.*)$")
 PERSIAN_CHAR_RE = re.compile(r"[\u0600-\u06FF]")
 
 
@@ -38,7 +38,7 @@ def split_post(text: str) -> tuple[dict, str]:
 
 def transform_references(body: str) -> str:
     lines = body.splitlines()
-    references: list[tuple[str, str]] = []
+    references: list[dict[str, str]] = []
     kept_lines: list[str] = []
     i = 0
 
@@ -67,23 +67,48 @@ def transform_references(body: str) -> str:
                 continue
             break
 
-        references.append((ref_id, "\n".join(content_lines).strip()))
+        reference_number = len(references) + 1
+        reference_label = ref_id if ref_id else str(reference_number)
+        references.append(
+            {
+                "raw_id": ref_id,
+                "number": str(reference_number),
+                "label": reference_label,
+                "anchor_id": f"fn-{reference_number}",
+                "content": "\n".join(content_lines).strip(),
+            }
+        )
 
     transformed_body = "\n".join(kept_lines).strip()
     if not references:
         return transformed_body
 
-    for ref_id, _ in references:
-        token = re.escape(ref_id)
-        transformed_body = re.sub(
-            rf"\[\^{token}\]",
-            (
-                f'<sup id="ref-{ref_id}" class="blog-reference-callout">'
-                f'<a href="#footnote-{ref_id}">[{ref_id}]</a>'
-                "</sup>"
-            ),
-            transformed_body,
+    named_references = {
+        ref["raw_id"]: ref for ref in references if ref["raw_id"]
+    }
+    anonymous_references = [ref for ref in references if not ref["raw_id"]]
+    anonymous_index = 0
+
+    def replace_reference_marker(match: re.Match[str]) -> str:
+        nonlocal anonymous_index
+        marker_id = match.group(1).strip()
+        if marker_id:
+            reference = named_references.get(marker_id)
+            if not reference:
+                return match.group(0)
+        else:
+            if anonymous_index >= len(anonymous_references):
+                return match.group(0)
+            reference = anonymous_references[anonymous_index]
+            anonymous_index += 1
+
+        return (
+            f'<sup id="ref-{reference["anchor_id"]}" class="blog-reference-callout">'
+            f'<a href="#footnote-{reference["anchor_id"]}">[{reference["label"]}]</a>'
+            "</sup>"
         )
+
+    transformed_body = re.sub(r"\[\^([^\]]*)\]", replace_reference_marker, transformed_body)
 
     refs_html_lines = [
         "",
@@ -92,13 +117,14 @@ def transform_references(body: str) -> str:
         "<hr>",
         "<ol>",
     ]
-    for ref_id, content in references:
+    for reference in references:
+        content = reference["content"]
         is_farsi = bool(PERSIAN_CHAR_RE.search(content))
         footnote_dir = "rtl" if is_farsi else "ltr"
         footnote_lang = "fa" if is_farsi else "en"
         refs_html_lines.append(
-            f'<li id="footnote-{ref_id}" dir="{footnote_dir}" lang="{footnote_lang}">{content} '
-            f'<a href="#ref-{ref_id}" aria-label="Back to reference [{ref_id}]">↩</a></li>'
+            f'<li id="footnote-{reference["anchor_id"]}" dir="{footnote_dir}" lang="{footnote_lang}">{content} '
+            f'<a href="#ref-{reference["anchor_id"]}" aria-label="Back to reference [{reference["label"]}]">↩</a></li>'
         )
     refs_html_lines.extend(["</ol>", "</section>"])
 
@@ -117,7 +143,7 @@ def first_paragraph(body: str) -> str:
         # strip markdown: images, links, bold/italic, inline code, HTML tags
         chunk = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", chunk)
         chunk = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", chunk)
-        chunk = re.sub(r"\[\^[^\]]+\]", "", chunk)
+        chunk = re.sub(r"\[\^[^\]]*\]", "", chunk)
         chunk = re.sub(r"[*_]{1,3}([^*_]+)[*_]{1,3}", r"\1", chunk)
         chunk = re.sub(r"`[^`]+`", "", chunk)
         chunk = re.sub(r"<[^>]+>", "", chunk)
