@@ -12,6 +12,8 @@ OUTPUT_JS = BLOG_DIR / "posts-data.js"
 
 FRONTMATTER_RE = re.compile(r"^---\s*\r?\n(.*?)\r?\n---\s*\r?\n([\s\S]*)", re.DOTALL)
 LOCALE_FILE_RE = re.compile(r"^(.+)-(en|fa)$")
+REFERENCE_DEF_RE = re.compile(r"^\[\^([^\]]+)\]:\s*(.*)$")
+PERSIAN_CHAR_RE = re.compile(r"[\u0600-\u06FF]")
 
 
 def parse_frontmatter_block(block: str) -> dict:
@@ -34,14 +36,88 @@ def split_post(text: str) -> tuple[dict, str]:
     return parse_frontmatter_block(match.group(1)), match.group(2)
 
 
+def transform_references(body: str) -> str:
+    lines = body.splitlines()
+    references: list[tuple[str, str]] = []
+    kept_lines: list[str] = []
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+        ref_match = REFERENCE_DEF_RE.match(line.strip())
+        if not ref_match:
+            kept_lines.append(line)
+            i += 1
+            continue
+
+        ref_id = ref_match.group(1).strip()
+        content_lines = [ref_match.group(2).strip()]
+        i += 1
+
+        # Markdown allows continuation lines in footnotes when indented.
+        while i < len(lines):
+            continuation = lines[i]
+            if continuation.startswith("  ") or continuation.startswith("\t"):
+                content_lines.append(continuation.lstrip())
+                i += 1
+                continue
+            if continuation.strip() == "":
+                content_lines.append("")
+                i += 1
+                continue
+            break
+
+        references.append((ref_id, "\n".join(content_lines).strip()))
+
+    transformed_body = "\n".join(kept_lines).strip()
+    if not references:
+        return transformed_body
+
+    for ref_id, _ in references:
+        token = re.escape(ref_id)
+        transformed_body = re.sub(
+            rf"\[\^{token}\]",
+            (
+                f'<sup id="ref-{ref_id}" class="blog-reference-callout">'
+                f'<a href="#footnote-{ref_id}">[{ref_id}]</a>'
+                "</sup>"
+            ),
+            transformed_body,
+        )
+
+    refs_html_lines = [
+        "",
+        "",
+        '<section class="blog-references">',
+        "<hr>",
+        "<ol>",
+    ]
+    for ref_id, content in references:
+        is_farsi = bool(PERSIAN_CHAR_RE.search(content))
+        footnote_dir = "rtl" if is_farsi else "ltr"
+        footnote_lang = "fa" if is_farsi else "en"
+        refs_html_lines.append(
+            f'<li id="footnote-{ref_id}" dir="{footnote_dir}" lang="{footnote_lang}">{content} '
+            f'<a href="#ref-{ref_id}" aria-label="Back to reference [{ref_id}]">↩</a></li>'
+        )
+    refs_html_lines.extend(["</ol>", "</section>"])
+
+    return transformed_body + "\n" + "\n".join(refs_html_lines)
+
+
 def first_paragraph(body: str) -> str:
     for chunk in re.split(r"\n{2,}", body):
         chunk = chunk.strip()
-        if not chunk or chunk.startswith(("#", "!", ">", "---", "```")):
+        if (
+            not chunk
+            or chunk.startswith(("#", "!", ">", "---", "```"))
+            or REFERENCE_DEF_RE.match(chunk)
+        ):
             continue
         # strip markdown: images, links, bold/italic, inline code, HTML tags
         chunk = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", chunk)
         chunk = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", chunk)
+        chunk = re.sub(r"\[\^[^\]]+\]", "", chunk)
         chunk = re.sub(r"[*_]{1,3}([^*_]+)[*_]{1,3}", r"\1", chunk)
         chunk = re.sub(r"`[^`]+`", "", chunk)
         chunk = re.sub(r"<[^>]+>", "", chunk)
@@ -53,13 +129,14 @@ def first_paragraph(body: str) -> str:
 
 def locale_entry(meta: dict, locale: str, body: str) -> dict:
     direction = meta.get("dir", "rtl" if locale == "fa" else "ltr").lower()
-    excerpt = meta.get("excerpt", "") or first_paragraph(body)
+    transformed_body = transform_references(body)
+    excerpt = meta.get("excerpt", "") or first_paragraph(transformed_body)
     return {
         "title": meta.get("title", ""),
         "excerpt": excerpt,
         "dir": "rtl" if direction == "rtl" else "ltr",
         "lang": meta.get("lang", "fa" if locale == "fa" else "en"),
-        "body": body,
+        "body": transformed_body,
     }
 
 

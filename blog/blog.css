@@ -259,6 +259,22 @@ html[dir="rtl"] {
   padding-right: 1.5em;
 }
 
+.blog-article .post-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1.25em 0;
+}
+
+.blog-article .post-body th,
+.blog-article .post-body td {
+  padding: 0.45em 0.6em;
+  vertical-align: top;
+}
+
+.blog-article .post-body th {
+  border-bottom: 1px solid #cfcfcf;
+}
+
 html[dir="ltr"] .blog-article .post-body ul,
 html[dir="ltr"] .blog-article .post-body ol {
   margin: 0 0 1.25em 1.5em;
@@ -270,6 +286,16 @@ html[dir="ltr"] .blog-article .post-body ol {
   display: block;
   margin: 1.25em auto;
   max-width: 100%;
+}
+
+.blog-article .post-body .blog-references li[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
+.blog-article .post-body .blog-references li[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
 }
 
 .blog-article .post-body img {
